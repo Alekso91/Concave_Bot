@@ -10,7 +10,8 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if words_to_scan in message.content:
-        await client.send_message(client.get_channel(NowPlayingChannelID), message)
+    if words_to_scan in message.content and message.author!=client.user:
+        channel = client.get_channel(NowPlayingChannelID)
+        await channel.send(message.content)
 
 client.run(discordBotToken)

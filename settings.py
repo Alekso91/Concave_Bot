@@ -1,4 +1,3 @@
 words_to_scan = "Now Playing"
-discordBotToken = "123"
-StageAdminChannelID = "456"
-NowPlayingChannelID = "789"
+discordBotToken = "c5kNDJA._3QsXqyqfY"
+NowPlayingChannelID = 123456
