@@ -1,3 +1,5 @@
-words_to_scan = "Now Playing"
-discordBotToken = "c5kNDJA._3QsXqyqfY"
-NowPlayingChannelID = 123456
+import os
+
+words_to_scan = "Now playing"
+discordBotToken = os.environ["bottoken"]
+NowPlayingChannelID = 123456789
