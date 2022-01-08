@@ -21,11 +21,24 @@ async def on_message(message):
         embed_message = embed_message.split("'description': '",1)[1]
         embed_message = embed_message.split("'title'",1)[0]
         channel = client.get_channel(NowPlayingChannelID)
-        embed = discord.Embed(title = words_to_scan,
-                            description = embed_message[:-3],
-                            color = 0x1a9cb6)
-        embed.set_thumbnail(url=img_url)
-        embed.set_footer(text = "Concave Co-op - The world's best kept secret.", icon_url = img_url)
+
+        if message.author.id == HypeBotID:
+            embed = discord.Embed(title = words_to_scan,
+                                description = embed_message[:-3],
+                                color = 0xd96c00)
+            embed.set_author(name="Rave-Stadium")
+            embed.set_thumbnail(url=img_url)
+            embed.set_footer(text = "Concave Co-op - The world's best kept secret.", icon_url = img_url)
+
+        elif message.author.id == VibesBotID:
+            embed = discord.Embed(title = words_to_scan,
+                                description = embed_message[:-3],
+                                color = 0x04d900)
+            embed.set_author(name="Cave-Stadium")
+            embed.set_thumbnail(url=img_url)
+            embed.set_footer(text = "Concave Co-op - The world's best kept secret.", icon_url = img_url)
+            print("Embed two : ", embed)
+            
         await channel.send(embed=embed)
         
 
