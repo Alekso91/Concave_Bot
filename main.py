@@ -18,7 +18,7 @@ async def on_message(message):
 
     if words_to_scan in embed_message and message.author!=client.user:
         print(embed_message)
-        embed_message = embed_message.split("'description': '",1)[1]
+        embed_message = embed_message.split("'description': ",1)[1]
         embed_message = embed_message.split("'title'",1)[0]
         channel = client.get_channel(NowPlayingChannelID)
 
